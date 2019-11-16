@@ -1,0 +1,50 @@
+<% include partials/header.ejs %>
+<style>
+
+body {
+    background-color: lightblue;
+    background-size: cover;
+}
+
+*[role="form"] {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #AFC7CB;
+}
+
+*[role="form"] h2 { 
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5%;
+	margin-bottom: 3%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+</style>
+<div class="container">
+    <form class="form-horizontal" role="form" action = "/signup" method = "POST">
+        <h2>Sign Up</h2>
+        <div class="form-group row">
+            <label for="username" class="col-sm-3 control-label">Username</label>
+            <div class="col-sm-9">
+                <input type="text" id="username" placeholder="username" class="form-control" name= "username">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-9">
+                <input type="password" id="password" placeholder="password" class="form-control" name = "password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+    </form> 
+</div> 
+
+
+<% include partials/footer.ejs %> 
